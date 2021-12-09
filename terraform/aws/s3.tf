@@ -5,7 +5,6 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have versioning
   bucket        = "${local.resource_prefix.value}-data"
   force_destroy = true
-  acl           = "public-read"
   tags = {
     Name                 = "${local.resource_prefix.value}-data"
     Environment          = local.resource_prefix.value
